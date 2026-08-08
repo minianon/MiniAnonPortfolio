@@ -2,7 +2,7 @@
 
 Software Engineer | AI Builder | Ex-Microsoft Software Engineering Intern
 
-Portfolio: [tushar.minianon.in](https://tushar.minianon.in)  
+Portfolio: [minianon.in](https://minianon.in)  
 MiniLink: [link.minianon.in/tusharbhardwaj](https://link.minianon.in/tusharbhardwaj)
 
 ---
