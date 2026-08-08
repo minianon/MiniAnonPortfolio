@@ -22,10 +22,10 @@ export default function Reachout({
   title = "Let's connect",
   subtitle = "Find me on these platforms",
   socialLinks = {
-    twitter: "https://x.com/Tusharab2004",
-    github: "https://github.com/TuShArBhArDwA",
-    linkedin: "https://www.linkedin.com/in/bhardwajtushar2004/",
-    resume: "https://drive.google.com/file/d/15bakmDxA3yH8f2TJfzv6_impnLvTPM73/view",
+    twitter: "https://x.com/minianondev",
+    github: "https://github.com/minianon",
+    linkedin: "https://www.linkedin.com/in/minianon",
+    resume: "https://drive.google.com/file/d/1w6fP3aL1qzg8SXLn6HoOZSUUXY5QG3gd/view",
     mail: "mailto:tusharbhardwaj2617@gmail.com"
   }
 }: ReachoutProps) {
@@ -60,7 +60,7 @@ export default function Reachout({
                           Tushar Bhardwaj
                         </p>
                         <p className="text-xs text-neutral-500 dark:text-neutral-400">
-                          @TuShArBhArDwA • he/him
+                          @minianon • he/him
                         </p>
                       </div>
                     </div>
@@ -68,7 +68,7 @@ export default function Reachout({
                       work learn improve
                     </p>
                     <p className="mt-2 text-xs text-neutral-500 dark:text-neutral-500">
-                      169 followers · 7 following
+                      207 followers · 11 following
                     </p>
                   </div>
                 </div>
