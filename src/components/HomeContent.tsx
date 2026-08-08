@@ -163,7 +163,7 @@ export default function NewHeroSection() {
                   <div className="px-4 mb-4 sm:mb-6 mt-4 sm:mt-6 flex items-center justify-between">
                     <h2 className="text-base sm:text-xl opacity-20 font-[family-name:var(--font-instrument-serif)]">Sponsors</h2>
                     <SponsorButton 
-                      href="https://github.com/sponsors/TuShArBhArDwA"
+                      href="https://github.com/sponsors/minianon"
                       tooltipText="Support my open source work"
                     />
                   </div>
@@ -181,11 +181,11 @@ export default function NewHeroSection() {
               <Reveal delay={0.1}>
                 <div className="sm:px-12 px-0 mt-4">
                   <h2 className="text-base font-[family-name:var(--font-instrument-serif)] sm:text-xl opacity-20 leading-relaxed -tracking-[0.01em] mb-4 px-4">
-                    GitHub Contributions <span className="opacity-20">●</span> @TuShArBhArDwA
+                    GitHub Contributions <span className="opacity-20">●</span> @minianon
                   </h2>
                   <div className="mb-4 sm:mb-6">
                     <ContributionsDisplay
-                      username="TuShArBhArDwA"
+                      username="minianon"
                       variant="compact"
                       className="w-full"
                     />
