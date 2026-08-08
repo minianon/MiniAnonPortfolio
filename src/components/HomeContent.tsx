@@ -48,10 +48,10 @@ export default function NewHeroSection() {
               title="engineer • developer • builder"
               profileImage="/pfp.jpeg"
               socialLinks={{
-                twitter: "https://x.com/Tusharab2004",
-                github: "https://github.com/TuShArBhArDwA",
-                linkedin: "https://www.linkedin.com/in/bhardwajtushar2004/",
-                resume: "https://drive.google.com/file/d/15bakmDxA3yH8f2TJfzv6_impnLvTPM73/view",
+                twitter: "https://x.com/minianondev",
+                github: "https://github.com/minianon",
+                linkedin: "https://www.linkedin.com/in/minianon",
+                resume: "https://drive.google.com/file/d/1w6fP3aL1qzg8SXLn6HoOZSUUXY5QG3gd/view",
               }}
             />
           </Reveal>
