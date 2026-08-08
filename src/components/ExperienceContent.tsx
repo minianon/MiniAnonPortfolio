@@ -22,7 +22,7 @@ export default function ExperienceContent() {
   const experiences: ExperienceItem[] = [
     {
       company: "Vitti Capital",
-      position: "Python Developer Intern",
+      position: "Python Developer",
       duration: "Mar 2026 – Present",
       description: "Built a real-time options trading dashboard and developed AI-powered financial market intelligence pipelines.",
       achievements: [
