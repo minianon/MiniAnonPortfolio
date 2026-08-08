@@ -63,7 +63,7 @@ export default function BlogsListClient({ blogs }: BlogsListClientProps) {
                   <FadeIn delay={0.3 + blogs.length * 0.05 + 0.1}>
                     <div className="flex justify-center mt-8 sm:mt-10">
                       <a 
-                        href="https://medium.com/@bhardwajtushar2004" 
+                        href="https://medium.com/@minianon" 
                         target="_blank" 
                         rel="noopener noreferrer"
                       >
