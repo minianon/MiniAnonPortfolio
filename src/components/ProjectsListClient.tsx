@@ -47,7 +47,7 @@ export default function ProjectsListClient({ projects }: ProjectsListClientProps
                   <FadeIn delay={0.5}>
                     <div className="flex justify-center mt-8 sm:mt-10">
                       <a 
-                        href="https://github.com/TuShArBhArDwA" 
+                        href="https://github.com/minianon" 
                         target="_blank" 
                         rel="noopener noreferrer"
                       >
