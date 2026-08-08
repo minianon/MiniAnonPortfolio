@@ -35,13 +35,13 @@ Custom SaaS applications, visual developer tools, and AI prototypes built from s
 
 Curated developer study systems and engineering playbooks:
 
-* **[System Design Guide](https://github.com/TuShArBhArDwA/System-Design)** - Design patterns for distributed systems at scale and preparation mocks.
-* **[Operating Systems (1Shot-OS)](https://github.com/TuShArBhArDwA/1Shot-OS)** - OS fundamental internals, process allocations, and thread revise sheets.
-* **[Database Systems (1Shot-DBMS)](https://github.com/TuShArBhArDwA/1Shot-DBMS)** - Relational algebra, normalizations, SQL indexing, and transaction models.
-* **[Computer Networks (1Shot-CN)](https://github.com/TuShArBhArDwA/1Shot-CN)** - Dynamic routing protocols, socket connections, and layer summaries.
-* **[SQL Playbook (1Shot-SQL)](https://github.com/TuShArBhArDwA/1Shot-SQL)** - Structured query schemas and transactional coding drills.
-* **[Object-Oriented Programming (1Shot-OOPS)](https://github.com/TuShArBhArDwA/1Shot-OOPS)** - Clean class structures, inheritances, and object abstractions in C++.
-* **[LeetCode Solutions (Company-wise)](https://github.com/TuShArBhArDwA/LeetCode-Questions-CompanyWise)** - Curated programming problems sorted by recruitment structures.
+* **[System Design Guide](https://github.com/minianon/System-Design)** - Design patterns for distributed systems at scale and preparation mocks.
+* **[Operating Systems (1Shot-OS)](https://github.com/minianon/1Shot-OS)** - OS fundamental internals, process allocations, and thread revise sheets.
+* **[Database Systems (1Shot-DBMS)](https://github.com/minianon/1Shot-DBMS)** - Relational algebra, normalizations, SQL indexing, and transaction models.
+* **[Computer Networks (1Shot-CN)](https://github.com/minianon/1Shot-CN)** - Dynamic routing protocols, socket connections, and layer summaries.
+* **[SQL Playbook (1Shot-SQL)](https://github.com/minianon/1Shot-SQL)** - Structured query schemas and transactional coding drills.
+* **[Object-Oriented Programming (1Shot-OOPS)](https://github.com/minianon/1Shot-OOPS)** - Clean class structures, inheritances, and object abstractions in C++.
+* **[LeetCode Solutions (Company-wise)](https://github.com/minianon/LeetCode-Questions-CompanyWise)** - Curated programming problems sorted by recruitment structures.
 
 ---
 
@@ -57,7 +57,7 @@ Curated developer study systems and engineering playbooks:
 
 ## Elsewhere
 
-* LinkedIn: [bhardwajtushar2004](https://www.linkedin.com/in/bhardwajtushar2004/)
-* Twitter: [Tusharab2004](https://x.com/Tusharab2004)
-* Medium: [bhardwajtushar2004](https://medium.com/@bhardwajtushar2004)
+* LinkedIn: [minianon](https://www.linkedin.com/in/minianon)
+* Twitter: [minianondev](https://x.com/minianondev)
+* Medium: [minianon](https://medium.com/@minianon)
 * Topmate: [tusharbhardwaj](https://topmate.io/tusharbhardwaj)
