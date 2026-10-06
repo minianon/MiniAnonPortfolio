@@ -1,5 +1,3 @@
-'use client'
-
 import OnekoCat from "@/components/OnekoCat"
 import NewHeroSection from "@/components/HomeContent"
 

@@ -1,5 +1,3 @@
-'use client'
-
 interface ContentParagraphProps {
   children: React.ReactNode
   className?: string

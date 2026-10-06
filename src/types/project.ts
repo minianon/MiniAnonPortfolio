@@ -3,7 +3,6 @@ export interface Project {
   title: string;
   description: string;
   longDescription?: string;
-  video?: string;
   image?: string;
   liveLink?: string;
   githubLink?: string;

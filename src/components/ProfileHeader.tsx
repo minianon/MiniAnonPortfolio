@@ -55,7 +55,7 @@ export default function ProfileHeader({
           <h1 className="font-[family-name:var(--font-instrument-serif)] text-2xl sm:text-4xl tracking-[0.01em] font-medium mb-0">
             {name}
           </h1>
-          <p className="opacity-40 text-xs sm:text-sm">
+          <p className="text-neutral-500 dark:text-neutral-400 text-xs sm:text-sm">
             {age} • {title}
           </p>
           {nowBuilding && (

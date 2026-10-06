@@ -1,5 +1,3 @@
-'use client'
-
 interface ContentSectionProps {
   title?: string
   subtitle?: string
