@@ -34,15 +34,15 @@ export default function NewHeroSection() {
         {/* Main Content */}
         <div className="mx-auto sm:w-[calc(100%-120px)] w-full max-w-4xl sm:px-0">
           {/* Banner Section */}
-          <Reveal delay={0.1}>
+          <div>
             <BannerSection 
               bannerImage="/banner.gif"
               quote="The best way to predict the future is to invent it."
             />
-          </Reveal>
+          </div>
           
           {/* Profile Header */}
-          <Reveal delay={0.2}>
+          <div>
             <ProfileHeader 
               name="Tushar Bhardwaj"
               age="22"
@@ -56,13 +56,13 @@ export default function NewHeroSection() {
                 resume: "https://drive.google.com/file/d/1c6H5jGh3-JZhmqd36VhTLsROKH9SkC47/view?usp=sharing",
               }}
             />
-          </Reveal>
+          </div>
           
           {/* Content Prose */}
           <div className="prose dark:prose-invert max-w-none">
             <div className="text-base">
               {/* Current Role Section */}
-              <Reveal delay={0.1}>
+              <div>
                 <ContentSection
                   subtitle="Software Engineer | AI Builder"
                   title=''
@@ -70,31 +70,31 @@ export default function NewHeroSection() {
                 >
                   <div></div>
                 </ContentSection>
-              </Reveal>
+              </div>
               
-              <Reveal delay={0.05}>
+              <div>
                 <SectionBorder className="mt-6" />
-              </Reveal>
+              </div>
               
               {/* About Section */}
-              <Reveal delay={0.1}>
+              <div>
                 <ContentSection className="pb-6 sm:pb-8 pt-4 sm:pt-6 px-2 sm:px-0">
                   <ContentParagraph className="mb-2 text-base sm:text-lg">
                     <span className="font-medium dark:text-white text-black">I build from zero to one.</span> Known online as <span className="font-medium dark:text-white text-black">Mini Anon</span>, I am a software engineer and AI builder who takes ideas to production at light speed. Having shipped high-performance systems as a Software Engineering Intern at <a href="https://microsoft.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#006FEE] transition-colors font-medium border-b border-neutral-300 dark:border-neutral-700">Microsoft</a>, I engineer full-stack applications—from visual workflow canvases to SaaS platforms featured at Times Square. I work across the entire product lifecycle, focusing less on stack debates and more on delivering products that solve real-world problems.
                   </ContentParagraph>
                 </ContentSection>
-              </Reveal>
+              </div>
 
               {/* Stats Strip */}
-              <Reveal delay={0.1}>
+              <div>
                 <div className="sm:px-12 px-4 pb-6 sm:pb-8">
                   <StatsStrip />
                 </div>
-              </Reveal>
+              </div>
 
-              <Reveal delay={0.05}>
+              <div>
                 <SectionBorder className="mt-6" />
-              </Reveal>
+              </div>
 
               {/* Experience Section */}
               <Reveal delay={0.1}>
@@ -247,9 +247,9 @@ export default function NewHeroSection() {
               {/* Sponsors Section */}
               <Reveal delay={0.1}>
                 <div className="sm:px-12 py-2">
-                  <div className="px-4 mb-4 sm:mb-6 mt-4 sm:mt-6 flex items-center justify-between">
-                    <h2 className="text-base sm:text-xl opacity-20 font-[family-name:var(--font-instrument-serif)]">Sponsors</h2>
-                    <SponsorButtons className="justify-end" />
+                  <div className="px-4 mb-4 sm:mb-6 mt-4 sm:mt-6 flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between">
+                    <h2 className="text-base sm:text-xl opacity-20 font-[family-name:var(--font-instrument-serif)] m-0">Sponsors</h2>
+                    <SponsorButtons className="sm:justify-end" />
                   </div>
                   <div className="px-4 mb-4 sm:mb-6">
                     <SponsorShowcase sponsors={sponsors} showEmptySlot={false} />

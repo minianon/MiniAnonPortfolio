@@ -79,6 +79,7 @@ export default function Reachout({
               <a
                 className="touch-manipulation active:opacity-75"
                 href={socialLinks.github}
+                aria-label="GitHub"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -114,6 +115,7 @@ export default function Reachout({
               <a
                 className="touch-manipulation active:opacity-75"
                 href={socialLinks.twitter}
+                aria-label="Twitter"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -149,6 +151,7 @@ export default function Reachout({
               <a
                 className="touch-manipulation active:opacity-75"
                 href={socialLinks.linkedin}
+                aria-label="LinkedIn"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -173,6 +176,7 @@ export default function Reachout({
               <a
                 className="touch-manipulation active:opacity-75"
                 href={socialLinks.mail}
+                aria-label="Mail"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -197,6 +201,7 @@ export default function Reachout({
               <a
                 className="touch-manipulation active:opacity-75"
                 href={socialLinks.resume}
+                aria-label="Resume"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -221,6 +226,7 @@ export default function Reachout({
               <a
                 className="touch-manipulation active:opacity-75"
                 href={socialLinks.links}
+                aria-label="All links"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{

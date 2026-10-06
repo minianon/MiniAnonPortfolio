@@ -10,17 +10,18 @@ import { achievements, communities, type Community as CommunityItem, media, phil
 const linkClass = "touch-manipulation active:opacity-75"
 const headingClass = "text-base sm:text-xl opacity-20 font-[family-name:var(--font-instrument-serif)]"
 
-// Counts from 0 to `target` once the element scrolls into view
+// Renders the real number (SSR, above the fold); counts up from 0 only when it scrolls into view later
 function useCountUp(target: number, duration = 1400) {
   const ref = useRef<HTMLDivElement>(null)
-  const [value, setValue] = useState(0)
+  const [value, setValue] = useState(target)
   useEffect(() => {
     const el = ref.current
     if (!el) return
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      setValue(target)
-      return
-    }
+    setValue(target)
+    const rect = el.getBoundingClientRect()
+    const alreadyVisible = rect.top < window.innerHeight && rect.bottom > 0
+    if (alreadyVisible || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    setValue(0)
     let frame = 0
     const observer = new IntersectionObserver(([entry]) => {
       if (!entry.isIntersecting) return
@@ -367,6 +368,7 @@ export function Testimonials() {
           <Marquee
             key={i}
             pauseOnHover
+            repeat={2}
             reverse={i === 1}
             className="p-0 [--gap:0.75rem]"
             style={{ ['--duration' as string]: `${Math.max(40, row.length * 7)}s` }}
