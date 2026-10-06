@@ -21,7 +21,7 @@ import { sponsors } from '@/data/sponsors'
 import SponsorShowcase from './SponsorShowcase'
 import { SponsorButtons } from './SponsorButton'
 import NeumorphButton from './NeumorphButton'
-import { StatsStrip, Recognition, FreeResources, Community, Media, Philosophy } from './Highlights'
+import { StatsStrip, Recognition, FreeResources, Community, Media, Philosophy, Testimonials } from './Highlights'
 
 export default function NewHeroSection() {
   return (
@@ -48,6 +48,7 @@ export default function NewHeroSection() {
               age="22"
               title="engineer • developer • builder"
               profileImage="/pfp.jpeg"
+              nowBuilding={{ name: "Weaave", href: "/projects/weaave" }}
               socialLinks={{
                 twitter: "https://x.com/minianondev",
                 github: "https://github.com/minianon",
@@ -254,6 +255,15 @@ export default function NewHeroSection() {
                     <SponsorShowcase sponsors={sponsors} showEmptySlot={false} />
                   </div>
                 </div>
+              </Reveal>
+
+              <Reveal delay={0.05}>
+                <SectionBorder className="mt-0 pt-0" />
+              </Reveal>
+
+              {/* Testimonials */}
+              <Reveal delay={0.1}>
+                <Testimonials />
               </Reveal>
 
               <Reveal delay={0.05}>

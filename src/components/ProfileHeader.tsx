@@ -12,6 +12,7 @@ interface ProfileHeaderProps {
   age?: string
   title?: string
   profileImage?: string
+  nowBuilding?: { name: string; href: string }
   socialLinks?: {
     twitter?: string
     resume?: string
@@ -25,6 +26,7 @@ export default function ProfileHeader({
   age = "22",
   title = "engineer • developer • builder",
   profileImage = "/pfp.jpeg",
+  nowBuilding,
   socialLinks = {
     twitter: "https://x.com/Tusharab2004",
     github: "https://github.com/TuShArBhArDwA",
@@ -58,6 +60,17 @@ export default function ProfileHeader({
           <p className="opacity-40 text-xs sm:text-sm">
             {age} • {title}
           </p>
+          {nowBuilding && (
+            <a
+              href={nowBuilding.href}
+              className="group/now mt-2 inline-flex items-center gap-1.5 text-xs text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors"
+            >
+              <span className="size-1.5 rounded-full bg-emerald-500" />
+              Now building
+              <span className="font-medium text-black/80 dark:text-white/85">{nowBuilding.name}</span>
+              <span className="transition-transform group-hover/now:translate-x-0.5">→</span>
+            </a>
+          )}
         </div>
         <div className="flex justify-start gap-1 sm:gap-2 mt-3 sm:mt-0 px-0">
           {socialLinks.github && (
