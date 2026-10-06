@@ -6,7 +6,7 @@ export const projects: Project[] = [
     title: "ShortlistMe",
     description: "Transform your resume into a stunning portfolio in seconds. Free Forever.",
     longDescription: "Transform your resume into a stunning, interactive portfolio in seconds. Build, customize, and share a fully-featured portfolio directly from your resume with built-in visitor tracking, SEO meta tags, and premium visual components. Free forever.",
-    liveLink: "http://shortlistme.site",
+    liveLink: "https://shortlistme.site",
     githubLink: "https://github.com/minianon/ShortlistMe",
     image: "/images/shortlistme.png",
     tags: ["Next.js", "AI Parser", "TypeScript", "Tailwind CSS", "Analytics"]

@@ -32,7 +32,7 @@ export default function ProfileHeader({
     twitter: "https://x.com/Tusharab2004",
     github: "https://github.com/TuShArBhArDwA",
     linkedin: "https://www.linkedin.com/in/bhardwajtushar2004/",
-    resume: "https://drive.google.com/file/d/1c6H5jGh3-JZhmqd36VhTLsROKH9SkC47/view?usp=sharing",
+    resume: "/resume",
   }
 }: ProfileHeaderProps) {
   const { theme, setTheme } = useTheme();
