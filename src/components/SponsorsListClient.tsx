@@ -2,7 +2,7 @@
 
 import OnekoCat from '@/components/OnekoCat'
 import SponsorShowcase from '@/components/SponsorShowcase'
-import SponsorButton from '@/components/SponsorButton'
+import { SponsorButtons } from '@/components/SponsorButton'
 import FadeIn from '@/components/FadeIn'
 import DiagonalPattern from '@/components/DiagonalPattern'
 import PageNavigation from '@/components/Navigation'
@@ -39,7 +39,7 @@ export default function SponsorsListClient({ sponsors }: SponsorsListClientProps
                         </p>
                       </div>
                       <div className="shrink-0">
-                        <SponsorButton href="https://github.com/sponsors/TuShArBhArDwA" />
+                        <SponsorButtons />
                       </div>
                     </div>
                   </div>

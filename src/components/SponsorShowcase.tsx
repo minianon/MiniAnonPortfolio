@@ -1,7 +1,6 @@
 'use client';
 
 import EmptySponsorSlotCard from '@/components/EmptySponsorSlotCard';
-import SponsorButton from '@/components/SponsorButton';
 import { Sponsor } from '@/types/sponsor';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -29,10 +28,9 @@ export default function SponsorShowcase({
             <div className="w-16 h-16 rounded-full bg-neutral-100 dark:bg-neutral-800 flex items-center justify-center mb-4">
               <HeartHandshake className="w-8 h-8 text-[#006FEE]" />
             </div>
-            <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 mb-6">
+            <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 m-0">
               Be the first to sponsor me
             </p>
-            <SponsorButton href={sponsorUrl} />
           </div>
         </div>
       </div>

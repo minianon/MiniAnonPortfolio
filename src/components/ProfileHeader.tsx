@@ -22,14 +22,14 @@ interface ProfileHeaderProps {
 
 export default function ProfileHeader({
   name = "Tushar Bhardwaj",
-  age = "21",
+  age = "22",
   title = "engineer • developer • builder",
   profileImage = "/pfp.jpeg",
   socialLinks = {
     twitter: "https://x.com/Tusharab2004",
     github: "https://github.com/TuShArBhArDwA",
     linkedin: "https://www.linkedin.com/in/bhardwajtushar2004/",
-    resume: "https://drive.google.com/file/d/15bakmDxA3yH8f2TJfzv6_impnLvTPM73/view",
+    resume: "https://drive.google.com/file/d/1c6H5jGh3-JZhmqd36VhTLsROKH9SkC47/view?usp=sharing",
   }
 }: ProfileHeaderProps) {
   const { theme, setTheme } = useTheme();

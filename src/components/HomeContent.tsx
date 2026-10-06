@@ -19,8 +19,9 @@ import { blogs } from '@/data/blogs'
 import { BlogCard } from './BlogCard'
 import { sponsors } from '@/data/sponsors'
 import SponsorShowcase from './SponsorShowcase'
-import SponsorButton from './SponsorButton'
+import { SponsorButtons } from './SponsorButton'
 import NeumorphButton from './NeumorphButton'
+import { StatsStrip, Recognition, FreeResources, Community, Media, Philosophy } from './Highlights'
 
 export default function NewHeroSection() {
   return (
@@ -44,14 +45,14 @@ export default function NewHeroSection() {
           <Reveal delay={0.2}>
             <ProfileHeader 
               name="Tushar Bhardwaj"
-              age="21"
+              age="22"
               title="engineer • developer • builder"
               profileImage="/pfp.jpeg"
               socialLinks={{
                 twitter: "https://x.com/minianondev",
                 github: "https://github.com/minianon",
                 linkedin: "https://www.linkedin.com/in/minianon",
-                resume: "https://drive.google.com/file/d/1w6fP3aL1qzg8SXLn6HoOZSUUXY5QG3gd/view",
+                resume: "https://drive.google.com/file/d/1c6H5jGh3-JZhmqd36VhTLsROKH9SkC47/view?usp=sharing",
               }}
             />
           </Reveal>
@@ -83,11 +84,18 @@ export default function NewHeroSection() {
                 </ContentSection>
               </Reveal>
 
+              {/* Stats Strip */}
+              <Reveal delay={0.1}>
+                <div className="sm:px-12 px-4 pb-6 sm:pb-8">
+                  <StatsStrip />
+                </div>
+              </Reveal>
+
               <Reveal delay={0.05}>
                 <SectionBorder className="mt-6" />
               </Reveal>
 
-               {/* Experience Section */}
+              {/* Experience Section */}
               <Reveal delay={0.1}>
                 <div className="sm:px-12 py-2">
                   <h2 className="text-base sm:text-xl mb-3 opacity-20 mt-4 sm:mt-6 px-4 font-[family-name:var(--font-instrument-serif)]">Professional Experience</h2>
@@ -97,11 +105,11 @@ export default function NewHeroSection() {
                 </div>
               </Reveal>
 
-                <Reveal delay={0.05}>
-                  <SectionBorder className="mt-4" />
-                </Reveal>
-              
-                 {/* Proof of Work */}
+              <Reveal delay={0.05}>
+                <SectionBorder className="mt-4" />
+              </Reveal>
+
+              {/* Proof of Work */}
               <Reveal delay={0.1}>
                 <div className="sm:px-12 py-2">
                   <div className="px-4 mb-4 sm:mb-6 mt-4 sm:mt-6">
@@ -121,6 +129,57 @@ export default function NewHeroSection() {
                         <span>→</span>
                       </NeumorphButton>
                     </Link>
+                  </div>
+                </div>
+              </Reveal>
+
+              <Reveal delay={0.05}>
+                <SectionBorder className="mt-0 pt-0" />
+              </Reveal>
+
+              {/* Watch Me Build */}
+              <Reveal delay={0.1}>
+                <Media />
+              </Reveal>
+
+              <Reveal delay={0.05}>
+                <SectionBorder className="mt-0 pt-0" />
+              </Reveal>
+
+              {/* Recognition */}
+              <Reveal delay={0.1}>
+                <Recognition />
+              </Reveal>
+
+              <Reveal delay={0.05}>
+                <SectionBorder className="mt-0 pt-0" />
+              </Reveal>
+
+              {/* Tech Stack Section */}
+              <Reveal delay={0.1}>
+                <div className="sm:px-12 mt-4 sm:mt-6 mb-4 sm:mb-6">
+                  <div className="px-4">
+                    <TechStackMarquee className="w-full" />
+                  </div>
+                </div>
+              </Reveal>
+
+              <Reveal delay={0.05}>
+                <SectionBorder className="mt-0 pt-0" />
+              </Reveal>
+
+              {/* GitHub Contributions */}
+              <Reveal delay={0.1}>
+                <div className="sm:px-12 px-0 mt-4">
+                  <h2 className="text-base font-[family-name:var(--font-instrument-serif)] sm:text-xl opacity-20 leading-relaxed -tracking-[0.01em] mb-4 px-4">
+                    GitHub Contributions <span className="opacity-20">●</span> @minianon
+                  </h2>
+                  <div className="mb-4 sm:mb-6">
+                    <ContributionsDisplay
+                      username="minianon"
+                      variant="compact"
+                      className="w-full"
+                    />
                   </div>
                 </div>
               </Reveal>
@@ -152,64 +211,54 @@ export default function NewHeroSection() {
                   </div>
                 </div>
               </Reveal>
-              
+
               <Reveal delay={0.05}>
                 <SectionBorder className="mt-0 pt-0" />
               </Reveal>
-              
+
+              {/* Interview Playbooks */}
+              <Reveal delay={0.1}>
+                <FreeResources />
+              </Reveal>
+
+              <Reveal delay={0.05}>
+                <SectionBorder className="mt-0 pt-0" />
+              </Reveal>
+
+              {/* Community */}
+              <Reveal delay={0.1}>
+                <Community />
+              </Reveal>
+
+              <Reveal delay={0.05}>
+                <SectionBorder className="mt-0 pt-0" />
+              </Reveal>
+
+              {/* Philosophy */}
+              <Reveal delay={0.1}>
+                <Philosophy />
+              </Reveal>
+
+              <Reveal delay={0.05}>
+                <SectionBorder className="mt-0 pt-0" />
+              </Reveal>
+
               {/* Sponsors Section */}
               <Reveal delay={0.1}>
                 <div className="sm:px-12 py-2">
                   <div className="px-4 mb-4 sm:mb-6 mt-4 sm:mt-6 flex items-center justify-between">
                     <h2 className="text-base sm:text-xl opacity-20 font-[family-name:var(--font-instrument-serif)]">Sponsors</h2>
-                    <SponsorButton 
-                      href="https://github.com/sponsors/minianon"
-                      tooltipText="Support my open source work"
-                    />
+                    <SponsorButtons className="justify-end" />
                   </div>
                   <div className="px-4 mb-4 sm:mb-6">
                     <SponsorShowcase sponsors={sponsors} showEmptySlot={false} />
                   </div>
                 </div>
               </Reveal>
-              
-              <Reveal delay={0.05}>
-                <SectionBorder className="mt-0 pt-0" />
-              </Reveal>
-              
-              {/* GitHub Contributions */}
-              <Reveal delay={0.1}>
-                <div className="sm:px-12 px-0 mt-4">
-                  <h2 className="text-base font-[family-name:var(--font-instrument-serif)] sm:text-xl opacity-20 leading-relaxed -tracking-[0.01em] mb-4 px-4">
-                    GitHub Contributions <span className="opacity-20">●</span> @minianon
-                  </h2>
-                  <div className="mb-4 sm:mb-6">
-                    <ContributionsDisplay
-                      username="minianon"
-                      variant="compact"
-                      className="w-full"
-                    />
-                  </div>
-                </div>
-              </Reveal>
-              
-              <Reveal delay={0.05}>
-                <SectionBorder className="mt-0 pt-0" />
-              </Reveal>
-              
-              {/* Tech Stack Section */}
-              <Reveal delay={0.1}>
-                <div className="sm:px-12 mt-4 sm:mt-6 mb-4 sm:mb-6">
-                  <div className="px-4">
-                    <TechStackMarquee className="w-full" />
-                  </div>
-                </div>
-              </Reveal>
-              
-              <Reveal delay={0.05}>
-                <SectionBorder className="mt-0 pt-0" />
-              </Reveal>
 
+              <Reveal delay={0.05}>
+                <SectionBorder className="mt-0 pt-0" />
+              </Reveal>
 
               {/* call to action*/}
               <Reveal delay={0.1}>
