@@ -1,6 +1,6 @@
 'use client'
 import Image from "next/image";
-import { FaGithub, FaLinkedin, FaPaperclip, FaXTwitter } from "react-icons/fa6";
+import { FaGithub, FaLink, FaLinkedin, FaPaperclip, FaXTwitter } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 import NeumorphButton from "./NeumorphButton";
 import { VisitorCount } from "./VisitorCount";
@@ -15,6 +15,7 @@ interface ReachoutProps {
     github?: string
     linkedin?: string
     mail?: string
+    links?: string
   }
 }
 
@@ -25,8 +26,9 @@ export default function Reachout({
     twitter: "https://x.com/minianondev",
     github: "https://github.com/minianon",
     linkedin: "https://www.linkedin.com/in/minianon",
-    resume: "https://drive.google.com/file/d/1w6fP3aL1qzg8SXLn6HoOZSUUXY5QG3gd/view",
-    mail: "mailto:tusharbhardwaj2617@gmail.com"
+    resume: "https://drive.google.com/file/d/1c6H5jGh3-JZhmqd36VhTLsROKH9SkC47/view?usp=sharing",
+    mail: "mailto:tusharbhardwaj2617@gmail.com",
+    links: "https://link.minianon.in/tusharbhardwaj",
   }
 }: ReachoutProps) {
   return (
@@ -68,7 +70,7 @@ export default function Reachout({
                       work learn improve
                     </p>
                     <p className="mt-2 text-xs text-neutral-500 dark:text-neutral-500">
-                      207 followers · 11 following
+                      226 followers · 11 following
                     </p>
                   </div>
                 </div>
@@ -208,6 +210,30 @@ export default function Reachout({
                   <FaPaperclip className="text-[20px] sm:text-[18px] text-neutral-800 dark:text-white/80 shrink-0" />
                   <span className="hidden sm:inline text-sm font-medium text-neutral-800 dark:text-white/80">
                     Resume
+                  </span>
+                </NeumorphButton>
+              </a>
+            </Tooltip>
+          )}
+
+          {socialLinks.links && (
+            <Tooltip content="Find me everywhere — all my links in one place" padded>
+              <a
+                className="touch-manipulation active:opacity-75"
+                href={socialLinks.links}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  WebkitTapHighlightColor: "transparent",
+                  WebkitTouchCallout: "none",
+                  WebkitUserSelect: "none",
+                  userSelect: "none",
+                }}
+              >
+                <NeumorphButton className="flex items-center gap-1.5 sm:gap-2 px-3 py-2 sm:px-3 sm:py-2">
+                  <FaLink className="text-[20px] sm:text-[18px] text-neutral-800 dark:text-white/80 shrink-0" />
+                  <span className="hidden sm:inline text-sm font-medium text-neutral-800 dark:text-white/80">
+                    All links
                   </span>
                 </NeumorphButton>
               </a>

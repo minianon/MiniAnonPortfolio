@@ -1,6 +1,16 @@
 import { FC } from 'react'
 import { BlogPost } from '@/types/blog'
 
+// Medium-style clap (hands) icon
+const ClapIcon = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
+    <path d="M8.5 11.5 6 9a1.3 1.3 0 0 0-1.9 1.9l4.6 4.6" />
+    <path d="M10.2 9.8 7.3 6.9a1.3 1.3 0 0 0-1.9 1.9" />
+    <path d="m12.2 9.3-2.7-2.7a1.3 1.3 0 0 1 1.9-1.9l5 5c1.6 1.6 1.9 4.2.4 6.1l-.6.7a5 5 0 0 1-7 .3l-4.4-4.4a1.3 1.3 0 0 1 1.9-1.9" />
+    <path d="M15 3.5 15.5 2M18 5l1.2-1M19.2 7.8h1.5" />
+  </svg>
+)
+
 interface BlogCardProps {
   blog: BlogPost
 }
@@ -19,10 +29,14 @@ export const BlogCard: FC<BlogCardProps> = ({ blog }) => {
         </div>
 
         {/* Metadata */}
-        <div className="shrink-0">
-          <span className="text-xs text-neutral-500 dark:text-neutral-400 uppercase tracking-wide transition-opacity duration-300 group-has-hover:opacity-40 group-has-hover:group-hover/item:opacity-100">
-            {blog.readTime}
-          </span>
+        <div className="shrink-0 flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-400 uppercase tracking-wide transition-opacity duration-300 group-has-hover:opacity-40 group-has-hover:group-hover/item:opacity-100">
+          {blog.claps !== undefined && (
+            <span className="inline-flex items-center gap-1 tabular-nums" title={`${blog.claps} claps on Medium`}>
+              <ClapIcon className="size-3.5" />
+              {blog.claps}
+            </span>
+          )}
+          <span>{blog.readTime}</span>
         </div>
 
       </div>
