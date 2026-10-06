@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next'
+import { projects } from '@/data/projects'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://minianon.in'
@@ -22,5 +23,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.7,
     },
+    {
+      url: `${baseUrl}/sponsors`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.5,
+    },
+    ...projects.map((project) => ({
+      url: `${baseUrl}/projects/${project.id}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    })),
   ]
 }

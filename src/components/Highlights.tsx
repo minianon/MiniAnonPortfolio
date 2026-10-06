@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import { ArrowUpRight, BookOpen, Play, Star } from 'lucide-react'
 import { FaTelegram, FaWhatsapp } from 'react-icons/fa6'
 import NeumorphButton from './NeumorphButton'
-import { achievements, communities, type Community as CommunityItem, media, philosophy, resources, stats } from '@/data/highlights'
+import { achievements, communities, type Community as CommunityItem, media, philosophy, resources, stats, testimonials, testimonialsSummary } from '@/data/highlights'
 
 const linkClass = "touch-manipulation active:opacity-75"
 const headingClass = "text-base sm:text-xl opacity-20 font-[family-name:var(--font-instrument-serif)]"
@@ -289,6 +289,46 @@ export function Philosophy() {
           </p>
           <p className="mt-2 mb-0 text-sm sm:text-base text-neutral-600 dark:text-neutral-400">{philosophy.body}</p>
         </blockquote>
+      </div>
+    </div>
+  )
+}
+
+export function Testimonials() {
+  return (
+    <div className="sm:px-12 py-2">
+      <div className="px-4 mt-4 sm:mt-6 mb-4 sm:mb-6 flex items-end justify-between gap-4">
+        <div>
+          <h2 className={headingClass}>What Mentees Say</h2>
+          <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-1 mb-0">
+            <Star className="inline size-3.5 -mt-0.5 mr-1 fill-current text-amber-500" />
+            {testimonialsSummary.rating} on Topmate
+          </p>
+        </div>
+        <a
+          href={testimonialsSummary.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="shrink-0 text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 hover:text-[#006FEE] transition-colors no-underline"
+        >
+          Read all {testimonialsSummary.count} ↗
+        </a>
+      </div>
+      <div className="px-4 grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4 sm:mb-6">
+        {testimonials.map((t) => (
+          <figure
+            key={t.name}
+            className="m-0 flex flex-col rounded-lg border border-black/10 dark:border-white/5 bg-white dark:bg-zinc-900 p-4"
+          >
+            <span aria-hidden className="text-3xl leading-none text-neutral-300 dark:text-neutral-700 font-[family-name:var(--font-instrument-serif)]">&ldquo;</span>
+            <blockquote className="m-0 mt-1 flex-1 border-0 p-0 text-sm not-italic leading-relaxed text-neutral-700 dark:text-neutral-300">
+              {t.quote}
+            </blockquote>
+            <figcaption className="mt-4 text-xs text-neutral-500 dark:text-neutral-400">
+              <span className="font-medium text-black/80 dark:text-white/85">{t.name}</span> · {t.date}
+            </figcaption>
+          </figure>
+        ))}
       </div>
     </div>
   )

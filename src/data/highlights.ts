@@ -131,3 +131,34 @@ export const philosophy = {
   quote: "Small steps, every day.",
   body: "I build tools to solve my own problems, then share them with the world. Currently exploring how AI changes everything about software development.",
 }
+
+export interface Testimonial {
+  quote: string
+  name: string
+  date: string
+}
+
+// Verbatim excerpts from public reviews on topmate.io/tusharbhardwaj
+export const testimonials: Testimonial[] = [
+  {
+    quote: "He patiently cleared all my doubts and helped me create a clear, actionable roadmap to follow in order to crack a great company, cutting through all the confusion.",
+    name: "Tanishq Dubey",
+    date: "Aug 2025",
+  },
+  {
+    quote: "His insights into tech, career growth, and cracking opportunities like Microsoft were eye-opening. What stood out the most? His humility, clarity, and genuine willingness to help.",
+    name: "Ajay Razz",
+    date: "Mar 2025",
+  },
+  {
+    quote: "Helped me even beyond the scheduled time and shared great suggestions throughout!",
+    name: "Saumya Rai",
+    date: "Nov 2025",
+  },
+]
+
+export const testimonialsSummary = {
+  rating: "4.7/5",
+  count: 42,
+  href: "https://topmate.io/tusharbhardwaj",
+}

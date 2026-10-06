@@ -24,7 +24,7 @@ const instrumentSerif = Instrument_Serif({
 export const metadata: Metadata = {
   metadataBase: new URL('https://minianon.in'),
   title: 'Tushar Bhardwaj',
-  description: 'Tushar Bhardwaj, known online as Mini Anon. Software engineer and AI builder shipping full-stack applications, SaaS products, and developer tools from zero to one.',
+  description: 'Tushar Bhardwaj (Mini Anon) — software engineer, AI builder and ex-Microsoft SWE intern. Products like Weaave and ShortlistMe, free interview playbooks, job-alert communities, and mentorship for 500+ developers.',
   keywords: [
     'Tushar Bhardwaj',
     'Mini Anon',
@@ -36,30 +36,28 @@ export const metadata: Metadata = {
     'portfolio',
     'Microsoft intern',
     'full-stack developer',
+    'interview preparation',
+    'system design',
+    'job alerts',
+    'tech mentorship',
+    'Topmate mentor',
   ],
   alternates: {
     canonical: 'https://minianon.in',
   },
   openGraph: {
     title: 'Tushar Bhardwaj — Mini Anon | Software Engineer & AI Builder',
-    description: 'Software engineer and AI builder shipping full-stack applications, SaaS products, and developer tools from zero to one.',
+    description: 'Software engineer & AI builder, ex-Microsoft SWE intern. Products, free interview playbooks, job-alert communities, and mentorship for 500+ developers.',
     url: 'https://minianon.in/',
     siteName: 'Tushar Bhardwaj — Mini Anon',
     locale: 'en_US',
     type: 'website',
-    images: [{
-      url: '/open-graph.png',
-      width: 1200,
-      height: 630,
-      alt: 'Tushar Bhardwaj — Mini Anon'
-    }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Tushar Bhardwaj — Mini Anon | Software Engineer & AI Builder',
-    description: 'Software engineer and AI builder shipping full-stack applications, SaaS products, and developer tools from zero to one.',
-    creator: '@Tusharab2004',
-    images: ['/open-graph.png'],
+    description: 'Software engineer & AI builder, ex-Microsoft SWE intern. Products, free interview playbooks, job-alert communities, and mentorship for 500+ developers.',
+    creator: '@minianondev',
   },
   robots: {
     index: true,
