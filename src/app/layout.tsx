@@ -42,9 +42,6 @@ export const metadata: Metadata = {
     'tech mentorship',
     'Topmate mentor',
   ],
-  alternates: {
-    canonical: 'https://minianon.in',
-  },
   openGraph: {
     title: 'Tushar Bhardwaj — Mini Anon | Software Engineer & AI Builder',
     description: 'Software engineer & AI builder, ex-Microsoft SWE intern. Products, free interview playbooks, job-alert communities, and mentorship for 500+ developers.',
