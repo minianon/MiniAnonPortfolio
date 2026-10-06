@@ -41,9 +41,5 @@ bun-debug.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# next-video
-videos/*
-!videos/*.json
-!videos/*.js
-!videos/*.ts
-public/_next-video
+# Claude Code local preview config
+.claude/

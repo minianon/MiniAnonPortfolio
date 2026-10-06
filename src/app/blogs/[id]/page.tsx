@@ -20,6 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${blog.title} | Tushar Bhardwaj`,
     description: blog.description || blog.title,
+    alternates: { canonical: blog.externalUrl },
     openGraph: {
       title: blog.title,
       description: blog.description || blog.title,
