@@ -69,6 +69,37 @@ export const metadata: Metadata = {
   },
 };
 
+// Structured data so search engines can show a profile card for "Tushar Bhardwaj" / "Mini Anon"
+const personJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Tushar Bhardwaj',
+  alternateName: 'Mini Anon',
+  url: 'https://minianon.in',
+  image: 'https://minianon.in/pfp.jpeg',
+  jobTitle: 'Software Engineer',
+  description: 'Software engineer and AI builder, ex-Microsoft SWE intern. Builds AI products and developer tools, and mentors developers.',
+  worksFor: { '@type': 'Organization', name: 'Vitti Capital' },
+  alumniOf: { '@type': 'Organization', name: 'Microsoft' },
+  knowsAbout: ['Software Engineering', 'Artificial Intelligence', 'Distributed Systems', 'Kubernetes', 'Full-stack Development', 'System Design'],
+  sameAs: [
+    'https://github.com/minianon',
+    'https://www.linkedin.com/in/minianon',
+    'https://x.com/minianondev',
+    'https://medium.com/@minianon',
+    'https://topmate.io/tusharbhardwaj',
+    'https://link.minianon.in/tusharbhardwaj',
+  ],
+}
+
+const websiteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Tushar Bhardwaj — Mini Anon',
+  url: 'https://minianon.in',
+  author: { '@type': 'Person', name: 'Tushar Bhardwaj' },
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -78,6 +109,10 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <meta name="google-site-verification" content="tMCNs2fgM6voEHBd3JsySffMFSiUCQDEFEF1iYI3-ZQ" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify([personJsonLd, websiteJsonLd]) }}
+        />
       </head>
       <body className={`${hkGrotesk.className} ${instrumentSerif.variable}`} suppressHydrationWarning={true}>
         <ThemeProvider

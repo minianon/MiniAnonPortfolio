@@ -50,6 +50,7 @@ export const ScrollToTop = () => {
     <motion.button
       className={`fixed bottom-8 right-8 z-200 p-3 bg-black dark:bg-white text-white dark:text-black rounded-full shadow-lg hover:shadow-xl transition-shadow`}
       onClick={scrollToTop}
+      aria-label="Scroll to top"
       initial={{ opacity: 0, scale: 0 }}
       animate={{ 
         opacity: isVisible ? 1 : 0, 

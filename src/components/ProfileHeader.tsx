@@ -6,6 +6,7 @@ import * as React from 'react';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 import PortfolioStars from './PortfolioStars';
 import NeumorphButton from "./NeumorphButton";
+import Image from 'next/image';
 
 interface ProfileHeaderProps {
   name?: string
@@ -44,12 +45,9 @@ export default function ProfileHeader({
   return (
     <div className="flex-col -mt-10">
       <div className="flex items-center justify-between mb-4 sm:ml-8 ml-4 sm:mr-8 mr-4">
-        <div 
-          className="w-24 h-24 sm:w-28 sm:h-28 relative z-10 rounded-full overflow-hidden bg-cover bg-center shrink-0"
-          role="img"
-          aria-label={name}
-          style={{ backgroundImage: `url("${profileImage}")` }}
-        />
+        <div className="w-24 h-24 sm:w-28 sm:h-28 relative z-10 rounded-full overflow-hidden shrink-0">
+          <Image src={profileImage} alt={name} fill priority sizes="112px" className="object-cover m-0" />
+        </div>
         <PortfolioStars />
       </div>
       <div className="text-left sm:flex sm:justify-between sm:items-center w-full sm:px-8 px-4 flex-col sm:flex-row">
@@ -79,6 +77,7 @@ export default function ProfileHeader({
                 <a 
                   className="touch-manipulation active:opacity-75 flex items-center justify-center w-8 h-8 sm:w-8 sm:h-8" 
                   href={socialLinks.github} 
+                  aria-label="GitHub"
                   target="_blank" 
                   rel="noopener noreferrer"
                   style={{ 
@@ -104,6 +103,7 @@ export default function ProfileHeader({
                 <a 
                   className="touch-manipulation active:opacity-75 flex items-center justify-center w-8 h-8 sm:w-8 sm:h-8" 
                   href={socialLinks.twitter} 
+                  aria-label="Twitter"
                   target="_blank" 
                   rel="noopener noreferrer"
                   style={{ 
@@ -129,6 +129,7 @@ export default function ProfileHeader({
                 <a 
                   className="touch-manipulation active:opacity-75 flex items-center justify-center w-8 h-8 sm:w-8 sm:h-8" 
                   href={socialLinks.resume} 
+                  aria-label="Resume"
                   target="_blank" 
                   rel="noopener noreferrer"
                   style={{ 
@@ -154,6 +155,7 @@ export default function ProfileHeader({
                 <a 
                   className="touch-manipulation active:opacity-75 flex items-center justify-center w-8 h-8 sm:w-8 sm:h-8" 
                   href={socialLinks.linkedin} 
+                  aria-label="LinkedIn"
                   target="_blank" 
                   rel="noopener noreferrer"
                   style={{ 
