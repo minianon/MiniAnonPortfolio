@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import { ArrowUpRight, BookOpen, Play, Star } from 'lucide-react'
 import { FaTelegram, FaWhatsapp } from 'react-icons/fa6'
 import NeumorphButton from './NeumorphButton'
+import { Marquee } from './magicui/marquee'
 import { achievements, communities, type Community as CommunityItem, media, philosophy, resources, stats, testimonials, testimonialsSummary } from '@/data/highlights'
 
 const linkClass = "touch-manipulation active:opacity-75"
@@ -294,40 +295,86 @@ export function Philosophy() {
   )
 }
 
+type TestimonialItem = (typeof testimonials)[number] & { id?: number }
+
+// Live Topmate reviews; the static excerpts show until (or if) the request fails
+function useTestimonials() {
+  const [items, setItems] = useState<TestimonialItem[]>(testimonials)
+  useEffect(() => {
+    fetch('/api/testimonials')
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.testimonials?.length) setItems(data.testimonials)
+      })
+      .catch(() => {})
+  }, [])
+  return items
+}
+
+// Roughly three lines at the card's max width
+const QUOTE_PREVIEW_CHARS = 140
+
+function TestimonialCard({ t }: { t: TestimonialItem }) {
+  const [expanded, setExpanded] = useState(false)
+  const isLong = t.quote.length > QUOTE_PREVIEW_CHARS
+  return (
+    <figure className="m-0 w-fit min-w-48 max-w-72 sm:max-w-80 self-start flex flex-col rounded-lg border border-black/10 dark:border-white/5 bg-white dark:bg-zinc-900 p-4">
+      <span aria-hidden className="text-3xl leading-none text-neutral-300 dark:text-neutral-700 font-[family-name:var(--font-instrument-serif)]">&ldquo;</span>
+      <blockquote className={`m-0 mt-1 border-0 p-0 text-sm not-italic leading-relaxed text-neutral-700 dark:text-neutral-300 ${isLong && !expanded ? 'line-clamp-3' : ''}`}>
+        {t.quote}
+      </blockquote>
+      {isLong && (
+        <button
+          type="button"
+          onClick={() => setExpanded((v) => !v)}
+          className="mt-1.5 self-start p-0 bg-transparent border-0 cursor-pointer text-xs font-medium text-neutral-500 dark:text-neutral-400 hover:text-[#006FEE] transition-colors"
+        >
+          {expanded ? 'Show less' : 'Read more'}
+        </button>
+      )}
+      <figcaption className="mt-3 text-xs text-neutral-500 dark:text-neutral-400">
+        <span className="font-medium text-black/80 dark:text-white/85">{t.name}</span> · {t.date}
+      </figcaption>
+    </figure>
+  )
+}
+
 export function Testimonials() {
+  const items = useTestimonials()
+  // Two rows moving in opposite directions keep 40+ reviews from feeling like one endless line
+  const rows = items.length > 8
+    ? [items.filter((_, i) => i % 2 === 0), items.filter((_, i) => i % 2 === 1)]
+    : [items]
   return (
     <div className="sm:px-12 py-2">
-      <div className="px-4 mt-4 sm:mt-6 mb-4 sm:mb-6 flex items-end justify-between gap-4">
-        <div>
-          <h2 className={headingClass}>What Mentees Say</h2>
-          <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-1 mb-0">
-            <Star className="inline size-3.5 -mt-0.5 mr-1 fill-current text-amber-500" />
-            {testimonialsSummary.rating} on Topmate
-          </p>
-        </div>
-        <a
-          href={testimonialsSummary.href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="shrink-0 text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 hover:text-[#006FEE] transition-colors no-underline"
-        >
-          Read all {testimonialsSummary.count} ↗
-        </a>
-      </div>
-      <div className="px-4 grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4 sm:mb-6">
-        {testimonials.map((t) => (
-          <figure
-            key={t.name}
-            className="m-0 flex flex-col rounded-lg border border-black/10 dark:border-white/5 bg-white dark:bg-zinc-900 p-4"
+      <div className="px-4 mt-4 sm:mt-6 mb-4 sm:mb-6">
+        <h2 className={headingClass}>What Mentees Say</h2>
+        <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-1 mb-0">
+          <Star className="inline size-3.5 -mt-0.5 mr-1 fill-current text-amber-500" />
+          {testimonialsSummary.rating} from {items.length > testimonials.length ? `${items.length} reviews` : 'mentees'} on{' '}
+          <a
+            href={testimonialsSummary.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-black/80 dark:text-white/85 underline decoration-neutral-300 dark:decoration-neutral-700 underline-offset-2 hover:text-[#006FEE] hover:decoration-[#006FEE] transition-colors"
           >
-            <span aria-hidden className="text-3xl leading-none text-neutral-300 dark:text-neutral-700 font-[family-name:var(--font-instrument-serif)]">&ldquo;</span>
-            <blockquote className="m-0 mt-1 flex-1 border-0 p-0 text-sm not-italic leading-relaxed text-neutral-700 dark:text-neutral-300">
-              {t.quote}
-            </blockquote>
-            <figcaption className="mt-4 text-xs text-neutral-500 dark:text-neutral-400">
-              <span className="font-medium text-black/80 dark:text-white/85">{t.name}</span> · {t.date}
-            </figcaption>
-          </figure>
+            Topmate
+          </a>
+        </p>
+      </div>
+      <div className="relative mb-4 sm:mb-6 mx-4 flex flex-col gap-3 [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]">
+        {rows.map((row, i) => (
+          <Marquee
+            key={i}
+            pauseOnHover
+            reverse={i === 1}
+            className="p-0 [--gap:0.75rem]"
+            style={{ ['--duration' as string]: `${Math.max(40, row.length * 7)}s` }}
+          >
+            {row.map((t) => (
+              <TestimonialCard key={t.id ?? t.name + t.date} t={t} />
+            ))}
+          </Marquee>
         ))}
       </div>
     </div>
