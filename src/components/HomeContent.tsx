@@ -1,5 +1,3 @@
-'use client'
-
 import Link from 'next/link'
 import DiagonalPattern from './DiagonalPattern'
 import BannerSection from './BannerSection'
@@ -21,7 +19,9 @@ import { sponsors } from '@/data/sponsors'
 import SponsorShowcase from './SponsorShowcase'
 import { SponsorButtons } from './SponsorButton'
 import NeumorphButton from './NeumorphButton'
-import { StatsStrip, Recognition, FreeResources, Community, Media, Philosophy, Testimonials } from './Highlights'
+import LazyMount from './LazyMount'
+import { StatsStrip, FreeResources, Community, Testimonials } from './Highlights'
+import { Recognition, Media, Philosophy } from './HighlightsStatic'
 
 export default function NewHeroSection() {
   return (
@@ -176,11 +176,13 @@ export default function NewHeroSection() {
                     GitHub Contributions <span className="opacity-20">●</span> @minianon
                   </h2>
                   <div className="mb-4 sm:mb-6">
-                    <ContributionsDisplay
-                      username="minianon"
-                      variant="compact"
-                      className="w-full"
-                    />
+                    <LazyMount minHeight={180}>
+                      <ContributionsDisplay
+                        username="minianon"
+                        variant="compact"
+                        className="w-full"
+                      />
+                    </LazyMount>
                   </div>
                 </div>
               </Reveal>
@@ -263,7 +265,9 @@ export default function NewHeroSection() {
 
               {/* Testimonials */}
               <Reveal delay={0.1}>
-                <Testimonials />
+                <LazyMount minHeight={460}>
+                  <Testimonials />
+                </LazyMount>
               </Reveal>
 
               <Reveal delay={0.05}>

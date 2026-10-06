@@ -1,5 +1,3 @@
-'use client'
-
 interface DiagonalPatternProps {
   side: 'left' | 'right'
   className?: string

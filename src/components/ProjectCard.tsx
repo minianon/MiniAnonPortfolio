@@ -5,71 +5,14 @@ import { FaGithub} from "react-icons/fa6";
 import { FiArrowUpRight } from "react-icons/fi";
 import Link from "next/link";
 import Image from "next/image";
-import Video from "next-video";
 import { ProjectNavigation } from './ProjectNavigation';
 import { Tooltip, TooltipTrigger, TooltipContent } from '@/components/ui/tooltip';
-import donezovideo from '/videos/donezo.mp4';
-import mindMentorVideo from '/videos/mind-mentor.mp4';
-import satyaCheckVideo from '/videos/satya-check.mp4';
-import fleethq from '/videos/fleethq.mp4';
-import rebatr from '/videos/rebatr-short.mp4';
-import lazycommitVideo from '/videos/lazycommit-video.mp4';
-import gocache from '/videos/gocache.mp4';
-import quotick from '/videos/quotick.mp4';
-import doable from '/videos/doable.mp4';
-import screenshot from '/videos/screenshot-studio.mp4';
-import readmelingo from '/videos/readmelingo.mp4';
-import foliox from '/videos/foliox.mp4';
-import mercurius from '/videos/mercurius.mp4';
-import oneurl from '/videos/oneurl.mp4';
-import bettershot from '/videos/bettershot.mp4';
-import linkpreview from '/videos/linkpreview.mp4';
 
 interface ProjectCardProps {
   project: Project;
   isDetailed?: boolean;
   allProjects?: Project[];
 }
-
-// Map video IDs to imported video assets
-const getVideoSource = (videoId: string) => {
-  switch (videoId) {
-    case 'donezo':
-      return donezovideo;
-    case 'mind-mentor':
-      return mindMentorVideo;
-    case 'satya-check':
-      return satyaCheckVideo;
-    case 'fleethq':
-      return fleethq; 
-    case 'rebatr-short':
-      return rebatr;
-    case 'lazycommit-video':
-      return lazycommitVideo;
-    case 'gocache':
-      return gocache;
-    case 'quotick':
-      return quotick
-    case 'doable':
-      return doable
-    case 'screenshot':
-      return screenshot
-    case 'readmelingo':
-      return readmelingo
-    case 'foliox':
-      return foliox
-    case 'mercurius':
-      return mercurius
-    case 'oneurl':
-      return oneurl
-    case 'bettershot':
-      return bettershot
-    case 'linkpreview':
-      return linkpreview
-    default:
-      return null;
-  }
-};
 
 export const ProjectCard = ({ project, isDetailed = false, allProjects = [] }: ProjectCardProps) => {
 
@@ -157,20 +100,7 @@ export const ProjectCard = ({ project, isDetailed = false, allProjects = [] }: P
 
       {/* Media Section - Fixed Container */}
       <div className="mb-6 sm:mb-8">
-        {project.video && getVideoSource(project.video) ? (
-          <div className="w-full aspect-video rounded-lg overflow-hidden">
-            <Video
-              src={getVideoSource(project.video)!}
-              poster={project.image}
-              className="w-full h-full object-cover"
-              controls
-              playsInline
-              autoPlay
-              muted
-              loop
-            />
-          </div>
-        ) : project.image && (
+        {project.image && (
           <div className="w-full aspect-4/3 relative rounded-lg overflow-hidden bg-black/5 dark:bg-white/5">
             <Image 
               src={project.image}
