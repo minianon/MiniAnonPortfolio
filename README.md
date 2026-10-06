@@ -17,7 +17,7 @@ I build from zero to one. Known online as Mini Anon, I am a software engineer an
 
 Custom SaaS applications, visual developer tools, and AI prototypes built from scratch:
 
-* **[ShortlistMe](http://shortlistme.site)** - Transform your resume into a stunning portfolio in seconds. Free Forever.
+* **[ShortlistMe](https://shortlistme.site)** - Transform your resume into a stunning portfolio in seconds. Free Forever.
 * **[AutoPress](https://press.minianon.in)** - Autonomous AI Editorial. Real Reporting. Independent Perspectives.
 * **[HireLens](https://lens.minianon.in)** - AI-powered resume screening. Instantly rank candidates, spot skill gaps, and hire 10x faster.
 * **[MiniLink](https://link.minianon.in)** - Create your link-in-bio page in seconds. Free forever.

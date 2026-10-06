@@ -26,7 +26,7 @@ export default function Reachout({
     twitter: "https://x.com/minianondev",
     github: "https://github.com/minianon",
     linkedin: "https://www.linkedin.com/in/minianon",
-    resume: "https://drive.google.com/file/d/1c6H5jGh3-JZhmqd36VhTLsROKH9SkC47/view?usp=sharing",
+    resume: "/resume",
     mail: "mailto:tusharbhardwaj2617@gmail.com",
     links: "https://link.minianon.in/tusharbhardwaj",
   }
