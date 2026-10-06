@@ -138,7 +138,8 @@ export interface Testimonial {
   date: string
 }
 
-// Verbatim excerpts from public reviews on topmate.io/tusharbhardwaj
+// Verbatim excerpts from public reviews on topmate.io/tusharbhardwaj.
+// Fallback only — /api/testimonials loads every review live.
 export const testimonials: Testimonial[] = [
   {
     quote: "He patiently cleared all my doubts and helped me create a clear, actionable roadmap to follow in order to crack a great company, cutting through all the confusion.",
@@ -155,10 +156,24 @@ export const testimonials: Testimonial[] = [
     name: "Saumya Rai",
     date: "Nov 2025",
   },
+  {
+    quote: "I had a session with Tushar Bhardwaj for dsa guidance, and he is truly amazing in this field. … I left the session feeling empowered and more determined than ever to achieve my goals.",
+    name: "Ganesh Chowdhary P",
+    date: "Mar 2025",
+  },
+  {
+    quote: "This is my 2nd time booking a topmate session with him. Very helpful, friendly and a genuine guy as always. … Answered all my doubts, increased my confidence, provided important resources …",
+    name: "Ajay",
+    date: "Sep 2025",
+  },
+  {
+    quote: "Tushar has been an incredible guide throughout my placement preparation journey. His insights, practical advice, and constant support made the process much more manageable.",
+    name: "Topmate mentee",
+    date: "Jan 2025",
+  },
 ]
 
 export const testimonialsSummary = {
   rating: "4.7/5",
-  count: 42,
   href: "https://topmate.io/tusharbhardwaj",
 }
