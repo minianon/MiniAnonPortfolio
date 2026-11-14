@@ -29,8 +29,8 @@ sequenceDiagram
   B->>API: POST { fingerprint }
   API->>V: record visitor
   V->>R: SADD visitors:unique fingerprint
-  API-->>B: count = SCARD + seed (432)
-  Note over V: if Redis env vars are missing, an in-memory set is used instead
+  API-->>B: uniqueVisitors = SCARD visitors:unique
+  Note over V: without Redis env vars, an in-memory set is used and the count starts from a seed of 432
 ```
 
 ## 3. GitHub data (`lib/github.ts`)
