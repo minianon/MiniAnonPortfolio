@@ -57,9 +57,6 @@ Curated developer study systems and engineering playbooks:
 
 ## Elsewhere
 
-* LinkedIn: [minianon](https://www.linkedin.com/in/minianon)
-* Twitter: [minianondev](https://x.com/minianondev)
-* Medium: [minianon](https://medium.com/@minianon)
-* Topmate: [tusharbhardwaj](https://topmate.io/tusharbhardwaj)
-* Connect: [link.minianon.in/tusharbhardwaj](https://link.minianon.in/tusharbhardwaj)
-* Support: [GitHub Sponsors](https://github.com/sponsors/minianon) · [Buy me a chai](https://buymeachai.ezee.li/minianon)
+**Find me everywhere →** [link.minianon.in/tusharbhardwaj](https://link.minianon.in/tusharbhardwaj)
+
+If my work helps you, you can support it on [GitHub Sponsors](https://github.com/sponsors/minianon) · [Buy me a chai](https://buymeachai.ezee.li/minianon).
